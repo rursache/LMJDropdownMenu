@@ -4,11 +4,11 @@ import PackageDescription
 let package = Package(
   name: "LMJDropdownMenu",
   products: [
-    .library(name: "LMJDropdownMenu", targets: ["LMJDropdownMenu"]),
+    .library(name: "LMJDropdownMenu", targets: ["DropdownMenu"]),
   ],
   targets: [
     .target(
-      name: "LMJDropdownMenu",
+      name: "DropdownMenu",
       dependencies: [],
       path: "LMJDropdownMenu"),
   ]

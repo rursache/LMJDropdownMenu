@@ -1,4 +1,0 @@
-module LMJDropdownMenu {
-    header "LMJDropdownMenu.h"
-    export *
-}

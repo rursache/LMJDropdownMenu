@@ -1,15 +1,15 @@
-// swift-tools-version:5.0
+// swift-tools-version:5.3
 import PackageDescription
 
 let package = Package(
-  name: "LMJDropdownMenu",
-  products: [
-    .library(name: "LMJDropdownMenu", targets: ["DropdownMenu"]),
-  ],
-  targets: [
-    .target(
-      name: "DropdownMenu",
-      dependencies: [],
-      path: "LMJDropdownMenu"),
-  ]
+    name: "LMJDropdownMenu",
+    products: [
+        .library(name: "LMJDropdownMenu", targets: ["LMJDropdownMenu"])
+    ],
+    targets: [
+        .target(
+            name: "LMJDropdownMenu",
+            path: "LMJDropdownMenu"
+        )
+    ]
 )

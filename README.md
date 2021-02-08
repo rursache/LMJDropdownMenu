@@ -1,6 +1,6 @@
 ![(logo)](https://avatars2.githubusercontent.com/u/15794032?s=460&v=4)
 
-简体中文 | [English](./README.en.md)             
+[简体中文](./README.md) | English                 
 
 # LMJDropdownMenu
 
@@ -9,114 +9,114 @@
 ![](https://img.shields.io/badge/language-oc-orange.svg)
 ![](https://img.shields.io/cocoapods/l/LMJDropdownMenu.svg?style=flat)
 
-- 一个简单好用的下拉菜单控件                           
+- A simple and easy to use drop-down menu control                     
 
-🎉 欢迎大家使用最新的3.0.0版本，同时也恳请各位开发者提供在使用新版本中发现的问题，以帮助此控件更加完善，抱拳！                     
-     
-      
-## 效果                              
-![](https://github.com/JerryLMJ/LMJDropdownMenu/raw/master/demo1.gif)        
+🎉 Welcome to use the latest 3.0.0 version, at the same time, also please you developers found problems in using the new version, in order to help this control to be more perfect, thank you!                    
 
 
-## 使用场景
-- 3.0 版本已经支持各种场景，包括导航栏、storyboard、UITableViewCell等，并且无论父视图空间是否足够都可以正常显示                     
-- ⚠️ 如果你使用的是 2.x.x 版本，请确保使用此控件的父视图有足够空间展示控件的下拉列表
+## Effect
+![](https://github.com/JerryLMJ/LMJDropdownMenu/raw/master/demo1.gif)  
 
 
-## 使用
-* 使用cocoapods安装：               
-`pod 'LMJDropdownMenu'`
-* 手动导入:             
-    * 将 `LMJDropdownMenu` 文件拖拽到工程中
-    * 导入头文件`#import "LMJDropdownMenu.h"`
+## Support what kinds of scenarios to use
+- The 3.0.0 version already supports a variety of scenarios, including navigation bars, storyboards, UITableViewCell, etc., and displays normally regardless of whether the superview space is sufficient or not.                        
+- ⚠️ If you are using the 2.x.x version, make sure that the superview that USES this control has enough space to display a drop-down list of controls.                    
+         
+          
+## Usage
+ * Use cocoapods:                     
+`pod 'LMJDropdownMenu'`                  
+
+* Manual import:                
+    * Drag All files in the `LMJDropdownMenu` folder to project                
+    * Import the main file：`#import "LMJDropdownMenu.h"`       
     
     
-## 属性及方法
-| 属性 | 描述 |
+## Properties and methods
+| Attribute | Description |
 | --- | ---
-| dataSource | 数据源代理对象
-| delegate | 代理对象
+| dataSource | dataSource proxy object
+| delegate | delegate object
 | --- | ---
-| title | 标题，默认‘Please Select’。选择选项值后，表示当前选择的选项
-| titleFont | 标题字体
-| titleColor | 标题颜色
-| titleAlignment | 标题对齐
-| titleEdgeInsets | 标题边界内距
-| titleBgColor | 标题背景颜色
+| title | title, default 'Please Select'. When the option value is selected, it represents the currently selected option
+| titleFont | titleFont
+| titleColor | titleColor
+| titleAlignment | title alignment
+| titleEdgeInsets | title boundary inner space
+| titleBgColor | title background color
 | --- | ---
-| rotateIcon | 下拉旋转箭头图标
-| rotateIconSize | 下拉旋转箭头大小
-| rotateIconMarginRight | 下拉旋转箭头右侧边距，默认7.5
-| rotateIconTint | 下拉旋转箭头颜色
+| rotateIcon | drop-down rotation arrow icon
+| rotateIconSize | drop-down rotation arrow size
+| rotateIconMarginRight | right margin of the drop-down rotation arrow, default 7.5
+| rotateIconTint | drop-down rotation arrow tint
 | --- | ---
-| optionBgColor | 选项背景颜色
-| optionFont | 选项字体
-| optionTextColor | 选项字体颜色
-| optionTextAlignment | 选项文字对齐
-| optionTextMarginLeft | 选项文字左侧边距，默认15
-| optionNumberOfLines | 选项文字行数，默认0（多行）
-| optionIconSize | 选项图标大小，默认(15,15)
-| optionIconMarginRight | 选项图标右侧边距，默认15
-| optionLineColor | 选项分割线颜色
-| optionLineHeight | 选项分割线粗细，默认0.5
+| optionBgColor | option background color
+| optionFont | option font
+| optionTextColor | option font color
+| optionTextAlignment | option text alignment
+| optionTextMarginLeft | option left margin of text, default 15
+| optionNumberOfLines | option number of lines of text, default 0 (multiple lines)
+| optionIconSize | option icon size, default (15,15)
+| optionIconMarginRight | option icon right margin, default 15
+| optionLineColor | option to divide line color
+| optionLineHeight | option to divide line height, default 0.5
 | --- | ---
-| optionsListLimitHeight | 选项列表的最大高度。超出最大高度后，选项可滚动。默认0 （当optionsListLimitHeight <= 0 时，下拉列表将显示所有选项）
-| showsVerticalScrollIndicatorOfOptionsList | 是否展示选项列表的纵向滑块
+| optionsListLimitHeight | The maximum height of the drop-down list, beyond which the options can be scrolled.  default 0.（When optionsListLimitHeight <= 0, the drop-down list shows all options）
+| showsVerticalScrollIndicatorOfOptionsList | Whether to display a Scroll Indicator for optionsList
 | --- | ---
-| animateTime | 下拉动画时间， 默认0.25
+| animateTime | animateTime, default 0.25
 
-| 方法 | 描述 |
+| Method | Description |
 | --- | ---
-| - reloadOptionsData | 刷新下拉列表数据
-| - showDropDown | 显示下拉列表
-| - hideDropDown | 隐藏下拉列表
+| - reloadOptionsData | refreshes the drop-down list data
+| - showDropDown | displays drop-down list
+| - hideDropDown | hide drop-down list
 
-
-| 代理方法 | 是否必选 | 描述 |
+| Delegate Method | Optional | Description |
 | --- | --- | ---
-| *LMJDropdownMenuDataSource* | --- | ---
-| - numberOfOptionsInDropdownMenu: | 必选 | 获取下拉列表选项个数
-| - dropdownMenu:heightForOptionAtIndex: | 必选 | 获取每个下拉选项的高度
-| - dropdownMenu:titleForOptionAtIndex: | 必选 | 获取每个下拉选项的文字
-| - dropdownMenu:iconForOptionAtIndex: | 可选 | 获取每个下拉选项的图标
+| *LMJDropdownMenuDataSource* | --- | -- -
+| - numberOfOptionsInDropdownMenu: | required | for the drop-down list
+| - dropdownMenu: heightForOptionAtIndex: | required | for the height of each drop-down options
+| - dropdownMenu: titleForOptionAtIndex: | required | text for each drop-down options
+| - dropdownMenu: iconForOptionAtIndex: | optional | optional icon for each drop-down options
 | *LMJDropdownMenuDelegate* | --- | ---
-| - dropdownMenuWillShow: | 可选 | 下拉菜单将要显示
-| - dropdownMenuDidShow: | 可选 | 下拉菜单已经显示
-| - dropdownMenuWillHidden: | 可选 | 下拉菜单将要隐藏
-| - dropdownMenuDidHidden: | 可选 | 下拉菜单已经隐藏
-| - dropdownMenu:didSelectOptionAtIndex:optionTitle: | 可选 | 点击下拉列表某个选项
+| - dropdownMenuWillShow: | optional | drop-down menu will be displayed
+| - dropdownMenuDidShow: | optional | drop-down menu has been displayed
+| - dropdownmenuhidden: | optional | drop-down menu will be hidden
+| - dropdownMenuDidHidden: | optional | drop-down menu has been hidden
+| - dropdownMenu: didSelectOptionAtIndex: optionTitle: | optional | click drop-down list some options
 
 
-## 更新日志
+## Update log      
 
-- **2020.12.25（3.0.4）：**                                                                     
-本次更新添加选项文字左侧边距。                        
-- **2020.12.18（3.0.3）：**                                                                     
-本次更新修复下拉菜单分割线展示问题。                                        
-- **2020.10.27（3.0.2）：**                                                                     
-本次更新增加了多个属性：旋转箭头的右侧边距和颜色、选项图标的右侧边距、选项分割线的高度。                       
-- **2020.10.22（3.0.1）：**                                                                     
-本次更新增加选项列表的高度限制属性，以及相关设置。当选项过多时，可通过滚动选项列表展示所有选项。                      
-- **2020.10.15（3.0.0）：**                                                                    
-🎉 最新的 3.0.0 版本已经支持各种场景，包括导航栏、storyboard、UITableViewCell等，并且无论父视图空间是否足够，都可正常显示！！！             
-本次更新重构下拉列表以适配父控件空间不足的情况，并满足多种场景的使用需求。                                           
-⚠️ 由 2.x.x 版本升级为 3.0.0 版本的同学需要注意：Api接口无变化，但下拉列表内部的展示方式已经完全不同，请注意替换过程中对下拉列表展示空间的处理（3.0.0版本无需考虑父视图空间是否足够的问题）。                     
-- **2019.12.23（2.1.0）：**                                                                    
-修复控件在xib和storyboard中的使用。                       
-增加了控件在storyboard中使用的演示Demo。                 
-- **2019.7.1（2.0.3）：**                                                                    
-本次更新，修复页面跳转过程中菜单消失的bug。                       
-增加了，当页面上有多个菜单时，打开菜单的时候会关闭其他已经展开的菜单。                    
-- **2019.6.21（2.0.2）：**                                                            
-本次更新，在demo中增加了同一个视图存在多个下拉菜单的使用方法，并且增加新的菜单样式设置演示。                
-优化下拉选项的布局效果。                          
-- **2019.6.5（2.0.1）：**                                                     
-本次更新修改了代理方法：由 `dropdownMenu:didSelectOptionAtIndex:`变更为 `dropdownMenu:didSelectOptionAtIndex:optionTitle:icon:`。                     
-⚠️ 请升级版本的同学注意修改代码中的代理方法！                        
-- **2019.5.26（2.0.0）：**                                          
-全新的2.0版本来啦！🎉🎉🎉               
-本次更新增加了大家一直要求的cocoapods安装，并完善了demo模块的文件结构以及全新的中英文文档。         
-本次更新增加多个自定义样式属性，并改为通过DataSource代理获取列表数据。              
+- **2020.12.25 (3.0.4) ：**                 
+This update adds the left margin of the option text.                            
+- **2020.12.18 (3.0.3) ：**                 
+This update fixes the dropdown menu splitter display issue.                         
+- **2020.10.27（3.0.2）：**             
+This update adds several properties: the right margin and color of the rotation arrow, the right margin of the option icon, and the height of the option divider.              
+- **2020.10.22（3.0.1）：**             
+This update adds a height limiting property to the list of options, as well as related Settings. When there are too many options, you can scroll through the options list to show all the options.                                               
+- **2020.10.15（3.0.0）：**             
+🎉 latest 3.0.0 version has support for various scenarios, including navigation, storyboard, UITableViewCell, etc, and whether the parent view space enough, can be normal !!!                 
+This update reconstructs the drop-down list to accommodate the lack of space in the parent control and to meet the needs of a variety of scenarios.                   
+⚠️ By 2.x.x Version upgraded to 3.0.0 version of the developers need to pay attention to: the Api interface no change, but the inside of the drop-down list display is completely different, please pay attention to in the process of replacing handling of drop-down list display space (3.0.0 version do not need to consider the question of whether a parent view space enough).                  
+- **2019.12.23（2.1.0）：**                      
+Fixed the use of controls in xib and storyboard.                     
+Added a Demo for the use of controls in storyboard.                     
+- **2019.7.1（2.0.3）：**              
+This update, fix the page push process menu disappeared bug.                       
+Added, when there are multiple menus on the page, it will close other menus that have been expanded when the menu is opened.                
+- **2019.6.21（2.0.2）：**                  
+In this update, the demo adds a way to use multiple drop-down menus for the same view, and a new demonstration of menu style Settings.                                  
+Optimize the layout of drop-down options.                            
+- **2019.6.5（2.0.1）：**                 
+The update changed the proxy method: by ` dropdownMenu:didSelectOptionAtIndex:` change to ` dropdownMenu:didSelectOptionAtIndex:optionTitle:icon:`.                        
+⚠️ please upgrade version of the proxy method users pay attention to modify the code!    
+- **2019.5.26（2.0.0）：**                                      
+The new 2.0 version is here! 🎉 🎉 🎉                     
+This update adds the installation of cocoapods that you have been asking for, and improves the file structure of demo module as well as new Chinese and English documents.        
+This update adds multiple custom style properties and changes to get the list data through the DataSource agent.                  
 - **2016.8.22（1.0.0）：**                               
-可以自定义下拉菜单的样式。                        
-可以设置选项标题和行高。                                        
+You can customize the style of the drop-down menu.               
+You can set the option title and line height.                       
